@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -8,7 +7,7 @@ import {
   Clock,
   Youtube,
   Instagram,
-  Tiktok,
+  YoutubeIcon,
   Wand2,
 } from "lucide-react";
 
@@ -41,7 +40,7 @@ const Index = () => {
             <div className="flex justify-center items-center gap-8 text-muted-foreground">
               <Youtube className="h-8 w-8" />
               <Instagram className="h-8 w-8" />
-              <Tiktok className="h-8 w-8" />
+              <YoutubeIcon className="h-8 w-8" />
             </div>
           </div>
         </div>
