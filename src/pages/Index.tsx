@@ -1,46 +1,82 @@
+
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sparkles,
-  Video,
-  BarChart3,
-  Clock,
-  Youtube,
-  Instagram,
-  YoutubeIcon,
-  Wand2,
-} from "lucide-react";
+import { ArrowRightIcon, Github, Sparkles, Video, BarChart3, Clock, Youtube, Instagram, YoutubeIcon, Wand2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Mockup, MockupFrame } from "@/components/ui/mockup";
+import { Glow } from "@/components/ui/glow";
+import { Icons } from "@/components/ui/icons";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center space-y-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold max-w-4xl mx-auto leading-tight">
-            Create Content with{" "}
-            <span className="text-gradient">AI-Powered Magic</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Generate high-quality scripts, edit videos, and optimize your content with
-            advanced AI technology. Perfect for creators on any platform.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="min-w-[160px]">
-              Start Free Trial
-            </Button>
-            <Button size="lg" variant="outline" className="min-w-[160px]">
-              Watch Demo
-            </Button>
-          </div>
-          <div className="pt-8">
-            <p className="text-sm text-muted-foreground mb-4">
-              TRUSTED BY CONTENT CREATORS FROM
+      <section
+        className="bg-background text-foreground py-12 sm:py-24 md:py-32 px-4 fade-bottom overflow-hidden pb-0"
+      >
+        <div className="mx-auto flex max-w-container flex-col gap-12 pt-16 sm:gap-24">
+          <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
+            {/* Badge */}
+            <Badge variant="outline" className="animate-appear gap-2">
+              <span className="text-muted-foreground">Special Launch Offer</span>
+              <a href="#pricing" className="flex items-center gap-1">
+                Save 50% Today
+                <ArrowRightIcon className="h-3 w-3" />
+              </a>
+            </Badge>
+
+            {/* Title */}
+            <h1 className="relative z-10 inline-block animate-appear bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-4xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
+              Create Content with AI-Powered Magic
+            </h1>
+
+            {/* Description */}
+            <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground opacity-0 delay-100 sm:text-xl">
+              Generate high-quality scripts, edit videos, and optimize your content with
+              advanced AI technology. Perfect for creators on any platform.
             </p>
-            <div className="flex justify-center items-center gap-8 text-muted-foreground">
-              <Youtube className="h-8 w-8" />
-              <Instagram className="h-8 w-8" />
-              <YoutubeIcon className="h-8 w-8" />
+
+            {/* Actions */}
+            <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
+              <Button size="lg" variant="default" asChild>
+                <a href="/dashboard" className="min-w-[160px]">
+                  Start Free Trial
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="#demo" className="min-w-[160px]">
+                  Watch Demo
+                </a>
+              </Button>
+            </div>
+
+            {/* Social Proof */}
+            <div className="pt-8">
+              <p className="text-sm text-muted-foreground mb-4">
+                TRUSTED BY CONTENT CREATORS FROM
+              </p>
+              <div className="flex justify-center items-center gap-8 text-muted-foreground">
+                <Youtube className="h-8 w-8" />
+                <Instagram className="h-8 w-8" />
+                <YoutubeIcon className="h-8 w-8" />
+              </div>
+            </div>
+
+            {/* Image with Glow */}
+            <div className="relative pt-12">
+              <MockupFrame
+                className="animate-appear opacity-0 delay-700"
+                size="small"
+              >
+                <Mockup type="responsive">
+                  <div className="aspect-video w-full max-w-3xl bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg">
+                    {/* Placeholder for app screenshot */}
+                  </div>
+                </Mockup>
+              </MockupFrame>
+              <Glow
+                variant="top"
+                className="animate-appear-zoom opacity-0 delay-1000"
+              />
             </div>
           </div>
         </div>
