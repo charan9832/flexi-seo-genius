@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Mockup, MockupFrame } from "@/components/ui/mockup";
 import { Glow } from "@/components/ui/glow";
 import { Icons } from "@/components/ui/icons";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
